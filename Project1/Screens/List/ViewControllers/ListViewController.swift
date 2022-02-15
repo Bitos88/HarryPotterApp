@@ -11,46 +11,19 @@ class ListViewController: UIViewController {
     
     
     var chars = [CharactersModel]()
-    
-  
-    
-    
-    
     var response = ApiResponse()
-    
-    
-    
-    
-    @IBOutlet var tableView: UITableView!
-    
     let cellLabel = ListCellTableViewCell()
     
+    //MARK: IBOutlets
+    @IBOutlet var tableView: UITableView!
+    
+    //MARK: LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "LISTA"
-        response.getApiChars { listCharacter in
-            for character in listCharacter {
-                self.chars.append(character)
-            }
-            self.tableView.reloadData()
-            print("SELF CHARS \(self.chars.count)")
-            self.navigationConfigure()
-        }
-    }
-    
-    private func navigationConfigure(){
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Log Out", style: .plain, target: self, action: #selector (tappedButton))
-    }
-    
-    @objc func tappedButton() {
-        let loginScreen = UIStoryboard(name: "LoginViewController", bundle: nil)
+        showAPICharacters()
 
-        guard let loginViewController = loginScreen.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else {return}
-
-        navigationController?.setViewControllers([loginViewController], animated: true)
-        
-        
-        }
+    }
 }
 
 
@@ -106,3 +79,32 @@ extension ListViewController: UITableViewDelegate {
 
 }
 
+//MARK: Extesion with Apiresponse & LogOut Navigation
+
+extension ListViewController {
+    
+    
+    //MARK: NAVIGATION LOG OUT
+    private func navigationConfigure(){
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Log Out", style: .plain, target: self, action: #selector (tappedButton))
+    }
+    
+    @objc func tappedButton() {
+        let loginScreen = UIStoryboard(name: "LoginViewController", bundle: nil)
+
+        guard let loginViewController = loginScreen.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else {return}
+
+        navigationController?.setViewControllers([loginViewController], animated: true)
+        }
+    
+    //MARK: APIRESPONSE FUNC
+    private func showAPICharacters() {
+        response.getApiChars { listCharacter in
+            for character in listCharacter {
+                self.chars.append(character)
+            }
+            self.tableView.reloadData()
+            self.navigationConfigure()
+        }
+    }
+}

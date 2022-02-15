@@ -11,10 +11,11 @@ class DetailViewController: UIViewController {
     
     var char: CharactersModel?
     
+    //MARK: IBOutlets
     @IBOutlet var detailImage: UIImageView!
-    
     @IBOutlet var detailLabel: UILabel!
     
+    //MARK: LifyCycle
     override func viewDidLoad() {
         super.viewDidLoad()
 

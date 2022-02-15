@@ -10,13 +10,13 @@ import UIKit
 class ListCellTableViewCell: UITableViewCell {
     
     
-    
+    //MARK: IBOutlets
     @IBOutlet var cellLabel: UILabel!
-    
     @IBOutlet var listImage: UIImageView!
-    
     @IBOutlet var spicesLabel: UILabel!
     
+    
+    //MARK: LifeCycle
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

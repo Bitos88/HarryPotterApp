@@ -10,22 +10,31 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
+    
+    //MARK: Register StoryBoard with name
     let storyboard = UIStoryboard(name: "LoginViewController", bundle: nil)
+    
+    //MARK: Instantiate Navigation Controller
     let navControler = UINavigationController()
     
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
       
-        
+        //MARK: WindowScene Creation
         guard let windowScene = (scene as? UIWindowScene) else {return}
         
         self.window = UIWindow(windowScene: windowScene)
         
-        guard let rootVC = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else {return}
+        //MARK: Instance the viewController of the login StoryBoard.
+        guard let initialViewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else {return}
         
-        let rootNC = UINavigationController(rootViewController: rootVC)
-        self.window?.rootViewController = rootNC
+        
+        //MARK: Creation of the NavigationController with his initial VIewController
+        let mainNavigationController = UINavigationController(rootViewController: initialViewController)
+        
+        //MARK: Set the rootViewController of the window with our MainViewController(NavigationController)
+        self.window?.rootViewController = mainNavigationController
         self.window?.makeKeyAndVisible()
         
         
