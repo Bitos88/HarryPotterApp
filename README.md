@@ -6,6 +6,6 @@ La aplicación consta de una pantalla de login con navegación a un listado de l
 
 App actualmente en desarrollo.
 
-![](Images/HPLogin.jpeg)
-![](Images/HPList.jpeg)
-![](Images/HPDetail.jpeg)
+![](Images/HPLogin.png)
+![](Images/HPList.png)
+![](Images/HPDetail.png)
