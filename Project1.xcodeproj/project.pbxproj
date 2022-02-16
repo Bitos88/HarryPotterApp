@@ -10,6 +10,7 @@
 		1A407C7427B8247800656559 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A407C7327B8247800656559 /* LoginViewController.swift */; };
 		1A407C7627B824AC00656559 /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A407C7527B824AC00656559 /* LoginViewController.storyboard */; };
 		1A8C953A27BBC14E0016AD4F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8C953927BBC14E0016AD4F /* Extensions.swift */; };
+		1A8C953C27BC07D30016AD4F /* TabBarControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8C953B27BC07D30016AD4F /* TabBarControllerViewController.swift */; };
 		1AE81A2827BABCE300756476 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE81A2727BABCE300756476 /* DetailViewController.swift */; };
 		1AE81A2A27BABCF400756476 /* DetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AE81A2927BABCF400756476 /* DetailViewController.storyboard */; };
 		1AFC774527B6CEFA00475B96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFC774427B6CEFA00475B96 /* AppDelegate.swift */; };
@@ -26,6 +27,7 @@
 		1A407C7327B8247800656559 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1A407C7527B824AC00656559 /* LoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
 		1A8C953927BBC14E0016AD4F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		1A8C953B27BC07D30016AD4F /* TabBarControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerViewController.swift; sourceTree = "<group>"; };
 		1AE81A2727BABCE300756476 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		1AE81A2927BABCF400756476 /* DetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailViewController.storyboard; sourceTree = "<group>"; };
 		1AFC774127B6CEFA00475B96 /* Project1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project1.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +103,7 @@
 			children = (
 				1AFC774627B6CEFA00475B96 /* SceneDelegate.swift */,
 				1AFC774427B6CEFA00475B96 /* AppDelegate.swift */,
+				1A8C953B27BC07D30016AD4F /* TabBarControllerViewController.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A8C953C27BC07D30016AD4F /* TabBarControllerViewController.swift in Sources */,
 				1A407C7427B8247800656559 /* LoginViewController.swift in Sources */,
 				1AFC774527B6CEFA00475B96 /* AppDelegate.swift in Sources */,
 				1AFC775F27B6E22100475B96 /* ListCellTableViewCell.swift in Sources */,

@@ -38,6 +38,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window?.makeKeyAndVisible()
         
         
+        
+        
+        
+        
     }
     
     func sceneDidDisconnect(_ scene: UIScene) {
