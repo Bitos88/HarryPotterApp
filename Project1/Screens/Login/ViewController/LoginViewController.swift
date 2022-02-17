@@ -34,7 +34,7 @@ class LoginViewController: UIViewController {
 extension LoginViewController {
     
     private func validateLogin() {
-        if(userNameLabel.text == "" && passwordLabel.text == "" )
+        if(userNameLabel.text == "Bitos88" && passwordLabel.text == "12345" )
         {
             //MARK: Navigate if condition is true
             
