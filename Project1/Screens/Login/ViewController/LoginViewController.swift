@@ -34,18 +34,31 @@ class LoginViewController: UIViewController {
 extension LoginViewController {
     
     private func validateLogin() {
-        if(userNameLabel.text == "Bitos88" && passwordLabel.text == "12345" )
+        if(userNameLabel.text == "" && passwordLabel.text == "" )
         {
             //MARK: Navigate if condition is true
             
             //MARK: instantiate ListStoryBoard
-            let storyBoard: UIStoryboard = UIStoryboard(name: "ListViewController", bundle: nil)
+            let listStoryBoard: UIStoryboard = UIStoryboard(name: "ListViewController", bundle: nil)
+            let collectionStoryBoard: UIStoryboard = UIStoryboard(name: "CollectionViewController", bundle: nil)
             
             //MARK: instantiate viewController of the storyBoard
-            let newViewController = storyBoard.instantiateViewController(withIdentifier: "ListViewController") as! ListViewController
+            let listViewController = listStoryBoard.instantiateViewController(withIdentifier: "ListViewController") as! ListViewController
+            listViewController.tabBarItem = UITabBarItem(title: "Lista", image: UIImage(systemName: "list.bullet.indent"), tag: 0)
+            
+            //MARK: collectionView
+            let collectionViewController = collectionStoryBoard.instantiateViewController(withIdentifier: "CollectionViewController") as! CollectionViewController
+            collectionViewController.tabBarItem = UITabBarItem(title: "Collection", image: UIImage(systemName: "list.bullet.rectangle.fill"), tag: 1)
+        
+            
+            
+            //MARK: TABBAR
+            let tabBarController = UITabBarController()
+            tabBarController.setViewControllers([listViewController, collectionViewController], animated: false)
+            
             
             //MARK: navigate to newViewController(screen)
-            navigationController?.setViewControllers([newViewController], animated: true)
+            navigationController?.setViewControllers([tabBarController], animated: true)
             
         }
         else

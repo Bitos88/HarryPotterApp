@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionViewControllerCell" id="anf-ja-Nlb" customClass="CollectionViewControllerCell" customModule="Project1" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="218" height="282"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4Ud-pP-UcB">
+                <rect key="frame" x="0.0" y="0.0" width="218" height="282"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="f2S-om-fpG">
+                        <rect key="frame" x="0.0" y="0.0" width="218" height="200"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="200" id="Ptb-6w-QKx"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jHq-M3-lLC">
+                        <rect key="frame" x="88" y="208" width="42" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="f2S-om-fpG" secondAttribute="trailing" id="gzx-5g-ZX0"/>
+                    <constraint firstItem="f2S-om-fpG" firstAttribute="leading" secondItem="4Ud-pP-UcB" secondAttribute="leading" id="s6h-Kn-Lhd"/>
+                    <constraint firstItem="f2S-om-fpG" firstAttribute="top" secondItem="4Ud-pP-UcB" secondAttribute="top" id="yzn-XI-yRd"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <size key="customSize" width="218" height="282"/>
+            <connections>
+                <outlet property="collImage" destination="f2S-om-fpG" id="h1w-bQ-UOC"/>
+                <outlet property="collLabel" destination="jHq-M3-lLC" id="mEO-Rf-02z"/>
+            </connections>
+            <point key="canvasLocation" x="256.52173913043481" y="204.24107142857142"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="background" width="540" height="360"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
