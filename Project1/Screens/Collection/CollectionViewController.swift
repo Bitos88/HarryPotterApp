@@ -12,6 +12,9 @@ class CollectionViewController: UIViewController {
     
     @IBOutlet var collectionView: UICollectionView!
     
+    var chars = [CharactersModel]()
+    var response = ApiResponse()
+    
     
     private var layout: UICollectionViewFlowLayout {
         let layout = UICollectionViewFlowLayout()
@@ -33,6 +36,8 @@ class CollectionViewController: UIViewController {
         
         collectionView.register(.init(nibName: "CollectionViewControllerCell", bundle: .main), forCellWithReuseIdentifier: "CollectionViewControllerCell")
         
+        showAPICharacters()
+        
 
     }
     
@@ -45,7 +50,7 @@ class CollectionViewController: UIViewController {
 
 extension CollectionViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        10
+        chars.count
     }
     
     
@@ -53,7 +58,8 @@ extension CollectionViewController: UICollectionViewDataSource {
         
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewControllerCell", for: indexPath) as? CollectionViewControllerCell else {fatalError()}
         
-        cell.collLabel.text = "BITO"
+        cell.collLabel.text = chars[indexPath.row].name
+        cell.collImage.load(urlString: chars[indexPath.row].image)
         
         return cell
     }
@@ -63,4 +69,16 @@ extension CollectionViewController: UICollectionViewDataSource {
 
 extension CollectionViewController: UICollectionViewDelegate {
     
+}
+
+
+extension CollectionViewController {
+    private func showAPICharacters() {
+        response.getApiChars { listCharacter in
+            for character in listCharacter {
+                self.chars.append(character)
+            }
+            self.collectionView.reloadData()
+        }
+    }
 }

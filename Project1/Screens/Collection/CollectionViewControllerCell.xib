@@ -23,17 +23,23 @@
                             <constraint firstAttribute="height" constant="200" id="Ptb-6w-QKx"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jHq-M3-lLC">
-                        <rect key="frame" x="88" y="208" width="42" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jHq-M3-lLC">
+                        <rect key="frame" x="9" y="208" width="200" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="200" id="9f2-NI-30l"/>
+                            <constraint firstAttribute="height" constant="21" id="QUV-KD-xdn"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="bottom" secondItem="jHq-M3-lLC" secondAttribute="bottom" constant="53" id="MBc-jw-E2G"/>
+                    <constraint firstItem="jHq-M3-lLC" firstAttribute="centerX" secondItem="4Ud-pP-UcB" secondAttribute="centerX" id="T3r-0i-KWM"/>
                     <constraint firstAttribute="trailing" secondItem="f2S-om-fpG" secondAttribute="trailing" id="gzx-5g-ZX0"/>
                     <constraint firstItem="f2S-om-fpG" firstAttribute="leading" secondItem="4Ud-pP-UcB" secondAttribute="leading" id="s6h-Kn-Lhd"/>
+                    <constraint firstItem="jHq-M3-lLC" firstAttribute="top" secondItem="f2S-om-fpG" secondAttribute="bottom" constant="8" symbolic="YES" id="toq-85-LU4"/>
                     <constraint firstItem="f2S-om-fpG" firstAttribute="top" secondItem="4Ud-pP-UcB" secondAttribute="top" id="yzn-XI-yRd"/>
                 </constraints>
             </collectionViewCellContentView>
