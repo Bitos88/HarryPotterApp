@@ -54,16 +54,32 @@
                                                         <constraint firstAttribute="width" constant="200" id="TQm-gW-gt3"/>
                                                     </constraints>
                                                 </stackView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5h-tL-pG6">
+                                                    <rect key="frame" x="351" y="34.5" width="47" height="31"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="47" id="wbk-ud-ep0"/>
+                                                        <constraint firstAttribute="height" constant="31" id="xI9-6E-nbG"/>
+                                                    </constraints>
+                                                    <color key="tintColor" red="0.96957415339999997" green="0.81601947549999998" blue="0.39126998190000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="star" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="favouriteTapped:" destination="GNx-zF-WZm" eventType="touchUpInside" id="dPN-rf-Pwb"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Juh-jT-JIS" firstAttribute="leading" secondItem="vkQ-Cg-Jid" secondAttribute="leadingMargin" constant="12" id="8Fo-Qr-eaH"/>
                                                 <constraint firstItem="hZI-PT-ZjD" firstAttribute="centerY" secondItem="vkQ-Cg-Jid" secondAttribute="centerY" id="mGx-wX-jLc"/>
+                                                <constraint firstAttribute="trailing" secondItem="P5h-tL-pG6" secondAttribute="trailing" constant="16" id="ooz-6u-KRs"/>
+                                                <constraint firstItem="P5h-tL-pG6" firstAttribute="centerY" secondItem="vkQ-Cg-Jid" secondAttribute="centerY" id="rG8-MD-uhn"/>
                                                 <constraint firstItem="Juh-jT-JIS" firstAttribute="centerY" secondItem="vkQ-Cg-Jid" secondAttribute="centerY" id="wtR-jO-Ezb"/>
                                                 <constraint firstItem="hZI-PT-ZjD" firstAttribute="leading" secondItem="Juh-jT-JIS" secondAttribute="trailing" constant="10" id="yCh-y7-Ug2"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="cellLabel" destination="TZD-VZ-dj1" id="6Kq-ku-D8a"/>
+                                            <outlet property="favouriteImage" destination="P5h-tL-pG6" id="nkI-Ko-E7m"/>
                                             <outlet property="listImage" destination="Juh-jT-JIS" id="gSZ-Uz-QN8"/>
                                             <outlet property="spicesLabel" destination="zlZ-23-Msp" id="2Pn-db-tAJ"/>
                                         </connections>
@@ -94,6 +110,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="star" catalog="system" width="128" height="116"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

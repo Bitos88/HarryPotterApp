@@ -14,6 +14,9 @@ struct CharactersModel: Codable {
     let name: String
     let species: String
     let image: String
+    let dateOfBirth: String
+    let actor: String
+    let house: String
     
 
 }

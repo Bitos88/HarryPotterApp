@@ -76,7 +76,27 @@ extension ListViewController: UITableViewDelegate {
 
     }
     
-
+    private func markAsFavourite() {
+        
+    }
+    
+    private func deleteSelection(indexPath: IndexPath) {
+        chars.remove(at: indexPath.row)
+        self.tableView.reloadData()
+    }
+    
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let action = UIContextualAction(style: .normal, title: "Delete") { [weak self] (action, view, completionHandler) in
+            self?.deleteSelection(indexPath: indexPath)
+            completionHandler(true)
+        }
+        action.backgroundColor = .systemRed
+        return UISwipeActionsConfiguration(actions: [action])
+    }
+    
+    
+    
 }
 
 //MARK: Extesion with Apiresponse & LogOut Navigation

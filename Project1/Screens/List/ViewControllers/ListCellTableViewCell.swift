@@ -15,6 +15,21 @@ class ListCellTableViewCell: UITableViewCell {
     @IBOutlet var listImage: UIImageView!
     @IBOutlet var spicesLabel: UILabel!
     
+    @IBOutlet var favouriteImage: UIButton!
+    
+    private var favouriteStatus: Bool = false
+    
+    @IBAction func favouriteTapped(_ sender: Any) {
+        if favouriteStatus == false {
+            favouriteStatus = true
+            favouriteImage.setImage(UIImage(systemName: "star.fill"), for: .normal)
+        } else {
+            favouriteStatus = false
+            favouriteImage.setImage(UIImage(systemName: "star"), for: .normal)
+        }
+        
+        
+    }
     
     //MARK: LifeCycle
     override func awakeFromNib() {
