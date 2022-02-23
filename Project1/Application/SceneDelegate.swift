@@ -31,10 +31,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         
         //MARK: Creation of the NavigationController with his initial VIewController
-        let mainNavigationController = UINavigationController(rootViewController: initialViewController)
+       // let mainNavigationController = UINavigationController(rootViewController: initialViewController)
         
         //MARK: Set the rootViewController of the window with our MainViewController(NavigationController)
-        self.window?.rootViewController = mainNavigationController
+        self.window?.rootViewController = initialViewController
         self.window?.makeKeyAndVisible()
         
         

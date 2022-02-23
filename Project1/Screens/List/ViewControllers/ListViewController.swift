@@ -40,6 +40,7 @@ extension ListViewController: UITableViewDataSource {
         
         cell.cellLabel.text = chars[indexPath.row].name
         cell.spicesLabel.text = chars[indexPath.row].species
+        cell.listImage.setPlaceHolder(placeHolderImg: "bghp")
         cell.listImage.load(urlString: chars[indexPath.row].image)
         
            
@@ -110,16 +111,14 @@ extension ListViewController {
     }
     
     @objc func tappedButton() {
-        let loginScreen = UIStoryboard(name: "LoginViewController", bundle: nil)
-
-        guard let loginViewController = loginScreen.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else {return}
-
-        navigationController?.setViewControllers([loginViewController], animated: true)
-        }
+        
+        navigationController?.dismiss(animated: true, completion: nil)
+        
+    }
     
     //MARK: APIRESPONSE FUNC
     private func showAPICharacters() {
-        response.getApiChars { listCharacter in
+        response.getApiCharacters { listCharacter in
             for character in listCharacter {
                 self.chars.append(character)
             }

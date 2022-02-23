@@ -74,7 +74,7 @@ extension CollectionViewController: UICollectionViewDelegate {
 
 extension CollectionViewController {
     private func showAPICharacters() {
-        response.getApiChars { listCharacter in
+        response.getApiCharacters { listCharacter in
             for character in listCharacter {
                 self.chars.append(character)
             }
